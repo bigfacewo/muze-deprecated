@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "d3-axis": "https://github.com/chartshq/d3-axis.git",
-    "d3-brush": "^1.0.4",https://github.com/chartshq/d3-axis.git
+    "d3-brush": "^1.0.4",
     "d3-collection": "1.0.4",
     "d3-color": "^1.2.0",
     "d3-drag": "^1.2.1",

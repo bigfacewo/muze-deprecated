@@ -1,5 +1,5 @@
 {
-  "name": "muze-monorepo",
+  "name": "muze",
   "private": true,
   "scripts": {
     "test": "npm run lint && npm run ut",
@@ -97,5 +97,10 @@
     "not dead",
     "Firefox ESR",
     "ie >= 11"
-  ]
+  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
 }

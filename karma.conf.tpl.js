@@ -6,7 +6,7 @@ module.exports = function (config) {
             'packages/<%= packageName %>/src/**/*.spec.js'
         ],
         webpack: {
-            devtool: 'inline-source-map',
+            devtool: 'eval-cheap-module-source-map',
             module: {
                 rules: [
                     {

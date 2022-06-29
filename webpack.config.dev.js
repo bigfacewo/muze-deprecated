@@ -13,7 +13,7 @@ module.exports = {
         libraryTarget: 'umd',
         umdNamedDefine: true
     },
-    devtool: 'source-map',
+    devtool: 'eval-cheap-module-source-map',
     module: {
         rules: [
             {
