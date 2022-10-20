@@ -22,7 +22,7 @@ const parseLayerDefinition = (sink, definition, layerDef, layerType) => {
 };
 
 const sanitizeEncoding = (encoding) => {
-    // Create object for each encoding value if encoding value is a string
+  // Create object for each encoding value if encoding value is a string
     for (const key in encoding) {
         if (typeof encoding[key] === 'string') {
             encoding[key] = {
@@ -52,7 +52,7 @@ const layerFactory = (() => {
             const defs = compositeLayers[mark];
             const newConf = mergeRecursive({}, layerDef);
 
-                // If it is a composite layer then resolve all the definitions of each unit layer
+      // If it is a composite layer then resolve all the definitions of each unit layer
             if (defs) {
                 serializedDefs = defs.map((unitLayerDef) => {
                     const sDef = {};
@@ -62,7 +62,7 @@ const layerFactory = (() => {
                 });
             } else {
                 const encoding = newConf.encoding;
-                // Create object for each encoding value if encoding value is a string
+        // Create object for each encoding value if encoding value is a string
                 sanitizeEncoding(encoding);
                 serializedDefs = newConf;
             }
@@ -79,14 +79,14 @@ const layerFactory = (() => {
             return instances.length === 1 ? instances[0] : instances;
         },
         getLayerClass: mark => factoryObj._layerRegistry[mark],
-        /**
-         * Registers a new composite layer definition in the layer factory.
-         *
-         * @public
-         *
-         * @param {string} layerType Mark type of the new composite layer.
-         * @param {Array} layerDefs Layer definitions of the composite layer.
-         */
+    /**
+     * Registers a new composite layer definition in the layer factory.
+     *
+     * @public
+     *
+     * @param {string} layerType Mark type of the new composite layer.
+     * @param {Array} layerDefs Layer definitions of the composite layer.
+     */
         composeLayers: (layerType, layerDefs) => {
             compositeLayers[layerType] = layerDefs;
         },
